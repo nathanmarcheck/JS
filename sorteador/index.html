@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador de números</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Sorteador de números</h1>
+
+    <form id="form">
+        <label for="res">Digite o número que você acha que é:</label>
+        <input type="number" id="res" required>
+        <input type="submit" value="Chutar">
+    </form>
+
+    <div id="saida"></div>
+    <div id="tentativas"></div>
+
+    <script>
+        var num = Math.floor(Math.random() * 100) + 1;
+
+        var form = document.getElementById('form');
+        var saida = document.getElementById('saida');
+        var numero = document.getElementById('tentativas');
+        var tentativas = 0;
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+
+            var res = Number(document.getElementById('res').value);
+            tentativas++;
+            numero.innerHTML = 'Número de tentativas: ' + tentativas;
+
+            if (res < num) {
+                saida.innerHTML = 'O número é maior';
+            } else if (res > num) {
+                saida.innerHTML = 'O número é menor';
+            } else {
+                saida.innerHTML = '🎉 Parabéns! Você acertou, o número era ' + num;
+            }
+        });
+    </script>
+</body>
+
+</html>
