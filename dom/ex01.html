@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/ex01.css">
+</head>
+<body>
+
+    <h1 id = "titulo">aprendendo DOM</h1>
+    <p>é uma api q permite manipularmos o HTML no JS. O documento HTML é visto como "document" e terá associado a ele vários métodos</p>
+    <ol>
+        <li>getElementBy("nome") - pegar elementos pelo id</li>
+        <li> innerHTML - inserir ou mudara conteúdo <input type="button" value = "mudar" onclick="mudarTitulo()"></li>
+        <li>mudar estilo <input type="button" value = "cor" onclick="mudarCor()"></li>
+        <li>classList - insere uma classe ao elemento html</li>
+            <ul>
+                <li>.add - adiciona uma classe ao elemento. <input type="button" value="mudar" onclick="destacar()"></li>
+                <li>.remove - remove uma class do elemento <input type="button" value="remover" onclick="remover()"></li>
+                <li>.taggle - insere ou remove a class se tiver o elemento <input type="button" value="alternar" onclick="alternar()"></li>
+            </ul>
+        <li>createElement - cria elemntos. <input type="button" value="criar" onclick = "adicionarTexto()" > <input type="button" value="remover" onclick="removerTexto()"> <input type="button" value = "limpar" onclick="removerTudo()"></li>    
+        <li>querySelectorAll <input type="button" value="colorir" onclick="colorir()"></li>
+    </ol>
+    <h2 id = "mundo">Olá mundo</h2>
+    <div id="conteiner"></div>
+
+
+     <script type = "text/javascript" src = "js/ex00.js"></script>   
+</body>
+</html>
